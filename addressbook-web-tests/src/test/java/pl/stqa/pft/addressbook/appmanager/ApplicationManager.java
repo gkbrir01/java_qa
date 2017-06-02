@@ -31,9 +31,9 @@ public class ApplicationManager {
       wd = new InternetExplorerDriver();
     }
 
-    wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-    wd.get("http://10.94.11.4/addressbook/");
-    //wd.get("http://192.168.0.150/addressbook/");
+    wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    //wd.get("http://10.94.11.4/addressbook/");
+    wd.get("http://192.168.0.150/addressbook/");
     groupHelper = new GroupHelper(wd);
     navigationHelper = new NavigationHelper(wd);
     sessionHelper = new SessionHelper(wd);
