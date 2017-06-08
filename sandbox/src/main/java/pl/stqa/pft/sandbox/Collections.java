@@ -24,6 +24,4 @@ public class Collections {
     //for (int i = 0; i < languages.size(); i++){
       //System.out.println("Chce nauczyć się "+ languages.get(i));
     }
-  }
-
 }
