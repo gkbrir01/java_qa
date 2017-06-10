@@ -4,8 +4,13 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import pl.stqa.pft.addressbook.model.ContactData;
+
+import java.util.AbstractList;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContactHelper extends HelperBase{
 
@@ -48,8 +53,9 @@ public class ContactHelper extends HelperBase{
     click(By.xpath("//div[@id='content']/form[1]/input[22]"));
   }
 
-  public void selectContact() {
-    click(By.name("selected[]"));
+  public void selectContact(int index) {
+    wd.findElements(By.name("selected[]")).get(index).click();
+    //click(By.name("selected[]"));
   }
 
   public void deleteSelectedGroups() {
@@ -74,6 +80,24 @@ public class ContactHelper extends HelperBase{
     return isElementPresent(By.name("selected[]"));
   }
 
-  public void test() {
+  public int getContactCount() {
+    return wd.findElements(By.name("selected[]")).size();
+  }
+
+  public List<ContactData> getContactList() {
+    List<ContactData> contacts = new ArrayList<ContactData>();
+    WebElement table = wd.findElement(By.cssSelector("table#maintable"));
+    List<WebElement> rows = table.findElements(By.cssSelector("tr[name=entry]"));
+    for (WebElement row : rows)
+    {
+      List<WebElement> cells = row.findElements(By.tagName("td"));
+      String firstName = cells.get(2).getText();
+      //System.out.println("FirstName: " + firstName);
+      String lastName = cells.get(1).getText();
+      //System.out.println("LastName: " + lastName);
+      ContactData contact = new ContactData(firstName,lastName,null,null,null,null,null);
+      contacts.add(contact);
+    }
+    return contacts;
   }
 }
