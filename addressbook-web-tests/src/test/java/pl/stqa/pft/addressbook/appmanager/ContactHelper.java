@@ -45,8 +45,13 @@ public class ContactHelper extends HelperBase{
     wd.switchTo().alert().accept();
   }
 
-  public void initContactModification() {
-    click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
+  public void initContactModification(int index) {
+    WebElement table = wd.findElement(By.cssSelector("table#maintable"));
+    List<WebElement> rows = table.findElements(By.cssSelector("tr[name=entry]"));
+    //WebElement row = rows.get(index);
+    List<WebElement> cells = rows.get(index).findElements(By.tagName("td"));
+    cells.get(7).click();
+   //click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
   }
 
   public void submitContactModyfication() {
@@ -95,7 +100,9 @@ public class ContactHelper extends HelperBase{
       //System.out.println("FirstName: " + firstName);
       String lastName = cells.get(1).getText();
       //System.out.println("LastName: " + lastName);
-      ContactData contact = new ContactData(firstName,lastName,null,null,null,null,null);
+      String id = cells.get(0).findElement(By.tagName("input")).getAttribute("value");
+      //System.out.println("id: " + id);
+      ContactData contact = new ContactData(id, firstName,lastName,null,null,null,null,null);
       contacts.add(contact);
     }
     return contacts;
