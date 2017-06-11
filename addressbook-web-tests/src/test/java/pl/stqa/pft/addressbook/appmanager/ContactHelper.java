@@ -2,13 +2,11 @@ package pl.stqa.pft.addressbook.appmanager;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import pl.stqa.pft.addressbook.model.ContactData;
 
-import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,10 +46,8 @@ public class ContactHelper extends HelperBase{
   public void initContactModification(int index) {
     WebElement table = wd.findElement(By.cssSelector("table#maintable"));
     List<WebElement> rows = table.findElements(By.cssSelector("tr[name=entry]"));
-    //WebElement row = rows.get(index);
     List<WebElement> cells = rows.get(index).findElements(By.tagName("td"));
     cells.get(7).click();
-   //click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
   }
 
   public void submitContactModyfication() {
@@ -60,7 +56,6 @@ public class ContactHelper extends HelperBase{
 
   public void selectContact(int index) {
     wd.findElements(By.name("selected[]")).get(index).click();
-    //click(By.name("selected[]"));
   }
 
   public void deleteSelectedGroups() {

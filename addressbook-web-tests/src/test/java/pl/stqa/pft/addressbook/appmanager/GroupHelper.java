@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pl.stqa.pft.addressbook.model.GroupData;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +37,6 @@ public class GroupHelper extends HelperBase{
 
   public void selectGroup(int index) {
     wd.findElements(By.name("selected[]")).get(index).click();
-    //click(By.name("selected[]"));
   }
 
   public void initGroupModification() {

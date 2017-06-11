@@ -3,7 +3,6 @@ package pl.stqa.pft.addressbook.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pl.stqa.pft.addressbook.model.ContactData;
-
 import java.util.List;
 
 public class ContactDeletionTests extends TestBase{
