@@ -2,7 +2,9 @@ package pl.stqa.pft.addressbook.tests;
 
 import org.openqa.selenium.remote.BrowserType;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import pl.stqa.pft.addressbook.appmanager.ApplicationManager;
 
 /**
