@@ -12,7 +12,7 @@ public class ContactDeletionTests extends TestBase{
   public void ensurePreconditions(){
     app.goTo().homePage();
     if (app.contact().list().size() == 0){
-      app.contact().create(new ContactData("Grzegorz10", "Kozlowski4", "Warsaw, ul. Magiera 3/22", null, "+48601000000", "gkbrir05@gmail.com","test1"));
+      app.contact().create(new ContactData().withFirstName("Grzegorz10").withLastName("Kozlowski4").withAddress("Warsaw, ul. Magiera 3/22").withMobilePhone("+48601000000").withEmail("gkbrir05@gmail.com").withGroup("test1"));
     }
   }
 
