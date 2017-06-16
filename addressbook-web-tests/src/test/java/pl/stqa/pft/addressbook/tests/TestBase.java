@@ -12,14 +12,14 @@ import pl.stqa.pft.addressbook.appmanager.ApplicationManager;
  */
 public class TestBase {
 
-  protected final ApplicationManager app = new ApplicationManager(BrowserType.IE);
+  protected static final ApplicationManager app = new ApplicationManager(BrowserType.IE);
 
-  @BeforeMethod
+  @BeforeSuite
   public void setUp() throws Exception {
     app.init();
   }
 
-  @AfterMethod
+  @AfterSuite
   public void tearDown() {
     app.stop();
   }
