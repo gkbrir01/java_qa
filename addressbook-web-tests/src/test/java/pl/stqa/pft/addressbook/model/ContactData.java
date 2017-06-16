@@ -8,8 +8,13 @@ public class ContactData {
   private String homePhone;
   private String mobilePhone;
   private String workPhone;
+  private String allPhones;
   private String email;
   private String group;
+
+  public String getAllPhones() {
+    return allPhones;
+  }
 
   public int getId() {
     return id;
@@ -36,7 +41,7 @@ public class ContactData {
   }
 
   public String getWorkPhone() {
-    return mobilePhone;
+    return workPhone;
   }
 
   public String getEmail() {
@@ -79,6 +84,11 @@ public class ContactData {
 
   public ContactData withWorkPhone(String workPhone) {
     this.workPhone = workPhone;
+    return this;
+  }
+
+  public ContactData withAllPhones(String allPhones) {
+    this.allPhones = allPhones;
     return this;
   }
 
