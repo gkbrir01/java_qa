@@ -3,7 +3,6 @@ package pl.stqa.pft.addressbook.tests;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pl.stqa.pft.addressbook.model.ContactData;
-
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
@@ -27,13 +26,10 @@ public class ContactDetailsTests extends TestBase{
     app.goTo().homePage();
     ContactData contactInfoFromEditForm = app.contact().infoFromEditForm(contact);
 
-
-
     assertThat(contactInfoFromDetails.getFirstName(), equalTo(contactInfoFromEditForm.getFirstName()));
     assertThat(contactInfoFromDetails.getLastName(), equalTo(contactInfoFromEditForm.getLastName()));
     assertThat(contactInfoFromDetails.getAllPhones(), equalTo(mergePhones(contactInfoFromEditForm)));
     assertThat(contactInfoFromDetails.getAllEmail(), equalTo(mergeEmails(contactInfoFromEditForm)));
-
   }
 
   private String mergePhones(ContactData contact) {
@@ -41,12 +37,10 @@ public class ContactDetailsTests extends TestBase{
             .stream().filter((s) -> ! s.equals(""))
             .collect(Collectors.joining("\n"));
   }
+
   private String mergeEmails(ContactData contact) {
     return Arrays.asList(contact.getEmail(), contact.getEmail2(),contact.getEmail3())
             .stream().filter((s) -> ! s.equals(""))
             .collect(Collectors.joining("\n"));
   }
-
-
-
 }

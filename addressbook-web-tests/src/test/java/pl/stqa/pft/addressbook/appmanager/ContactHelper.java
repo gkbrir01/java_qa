@@ -59,7 +59,6 @@ public class ContactHelper extends HelperBase{
     {
       List<WebElement> cells = row.findElements(By.tagName("td"));
       int idx = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("value"));
-      //System.out.println("value: " + idx +" Input parameter :"+ id );
       if (id == idx){
         cells.get(7).findElement(By.tagName("a")).click();
         return;
@@ -74,7 +73,6 @@ public class ContactHelper extends HelperBase{
     {
       List<WebElement> cells = row.findElements(By.tagName("td"));
       int idx = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("value"));
-      System.out.println("value: " + idx +" Input parameter :"+ id );
       if (id == idx){
         cells.get(6).findElement(By.tagName("a")).click();
         return;
@@ -173,33 +171,32 @@ public class ContactHelper extends HelperBase{
     String[] textRows = textBlock.split("\n");
     String[] fullName = textRows[0].split("\\s");
     String firstname = fullName[0];
-    System.out.println("firstname: "+ firstname);
     String lastname = fullName[1];
-    System.out.println("lastname: "+ lastname);
-    String address = "";
+
     int i = 1;
+    String address = "";
       while(!textRows[i].isEmpty()){
-        address  = address + textRows[i] +"\n";
+        address  = Arrays.asList(address,textRows[i]).stream()
+                .filter((s) -> ! s.equals("")).collect(Collectors.joining("\n"));
         i++;
       }
 
-    String allphones = "";
     i++;
+    String allphones = "";
     while(!textRows[i].isEmpty()){
       allphones  = Arrays.asList(allphones,textRows[i]).stream()
               .filter((s) -> ! s.equals("")).collect(Collectors.joining("\n"));
-      //allphones  = allphones + textRows[i] +"\n";
       i++;
     }
 
-    String allemails = "";
     i++;
+    String allemails = "";
     while(!textRows[i].isEmpty()){
       allemails  = Arrays.asList(allemails,textRows[i]).stream()
               .filter((s) -> ! s.equals("")).collect(Collectors.joining("\n"));
-      //allemails  = allemails + textRows[i] +"\n";
       i++;
     }
+
     //wd.navigate().back();
     return new ContactData().withId(contact.getId()).withFirstName(firstname).withLastName(lastname).withAddress(address)
            .withAllPhones(cleanedPhones(allphones)).withAllEmail(allemails);
