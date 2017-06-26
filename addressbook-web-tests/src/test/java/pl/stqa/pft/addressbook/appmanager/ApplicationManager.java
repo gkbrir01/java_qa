@@ -41,7 +41,7 @@ public class ApplicationManager {
     }
 
     wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-    wd.get(properties.getProperty("web.baseUrlHome"));
+    wd.get(properties.getProperty("web.baseUrlWork"));
     groupHelper = new GroupHelper(wd);
     navigationHelper = new NavigationHelper(wd);
     sessionHelper = new SessionHelper(wd);
