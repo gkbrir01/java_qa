@@ -6,21 +6,5 @@
     "mobilePhone": "+48601000000",
     "email": "test0@gmail.com",
     "group": "test1"
-  },
-  {
-    "firstName": "FirstName1",
-    "lastName": "LastName1",
-    "address": "Warsaw, ul. Magiera 1",
-    "mobilePhone": "+48601000001",
-    "email": "test1@gmail.com",
-    "group": "test1"
-  },
-  {
-    "firstName": "FirstName2",
-    "lastName": "LastName2",
-    "address": "Warsaw, ul. Magiera 2",
-    "mobilePhone": "+48601000002",
-    "email": "test2@gmail.com",
-    "group": "test1"
   }
 ]
