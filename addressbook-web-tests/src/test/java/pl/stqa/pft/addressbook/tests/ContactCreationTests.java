@@ -7,6 +7,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pl.stqa.pft.addressbook.model.ContactData;
 import pl.stqa.pft.addressbook.model.Contacts;
+import pl.stqa.pft.addressbook.model.Groups;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -52,13 +54,14 @@ public class ContactCreationTests extends TestBase{
 
   @DataProvider
   public Iterator<Object[]> validContactsFromCSV() throws IOException {
+    Groups groups = app.db().groups();
     List<Object[]> list = new ArrayList<Object[]>();
     BufferedReader reader = new BufferedReader(new FileReader(new File("addressbook-web-tests/src/test/resources/contacts.csv")));
     String line = reader.readLine();
     while (line != null) {
       String[] split = line.split(";");
       list.add(new Object[] {new ContactData().withFirstName(split[0]).withLastName(split[1]).withAddress(split[2])
-              .withMobilePhone(split[3]).withEmail(split[4]).withGroup(split[5])});
+              .withMobilePhone(split[3]).withEmail(split[4])});
       line = reader.readLine();
     }
     return list.iterator();
@@ -66,17 +69,18 @@ public class ContactCreationTests extends TestBase{
 
   @DataProvider
   public Iterator<Object[]> validContacts(){
+    Groups groups = app.db().groups();
     List<Object[]> list = new ArrayList<Object[]>();
     list.add(new Object[] {new ContactData().withFirstName("Grzegorz1").withLastName("Kozlowski1").withAddress("Warsaw, ul. Magiera 1")
-            .withHomePhone("+484083625").withMobilePhone("+48601200301").withEmail("test1@gmail.com").withGroup("test1")});
+            .withHomePhone("+484083625").withMobilePhone("+48601200301").withEmail("test1@gmail.com").inGroup(groups.iterator().next())});
     list.add(new Object[] {new ContactData().withFirstName("Grzegorz2").withLastName("Kozlowski2").withAddress("Warsaw, ul. Magiera 2")
-            .withMobilePhone("+48601200302").withEmail("test2@gmail.com").withGroup("test1")});
+            .withHomePhone("+484083626").withMobilePhone("+48601200302").withEmail("test2@gmail.com").inGroup(groups.iterator().next())});
     list.add(new Object[] {new ContactData().withFirstName("Grzegorz3").withLastName("Kozlowski3").withAddress("Warsaw, ul. Magiera 3")
-            .withMobilePhone("+48601200303").withEmail("test3@gmail.com").withGroup("test1")});
+            .withHomePhone("+484083627").withMobilePhone("+48601200303").withEmail("test3@gmail.com").inGroup(groups.iterator().next())});
     return list.iterator();
   }
 
-  @Test(dataProvider = "validContactsFromXML")
+  @Test(dataProvider = "validContacts")
   public void testContactCreation(ContactData contact) {
     Contacts before = app.db().contacts();
     app.goTo().homePage();

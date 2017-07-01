@@ -13,7 +13,7 @@ public class ContactAddressTest extends TestBase{
   public void ensurePreconditions(){
     app.goTo().homePage();
     if (app.contact().all().size() == 0){
-      app.contact().create(new ContactData().withFirstName("Grzegorz10").withLastName("Kozlowski4").withAddress("Warsaw, ul. Magiera 3/22").withHomePhone("+48 20 50 50").withMobilePhone("+48601000000").withEmail("gkbrir05@gmail.com").withGroup("test1"));
+      app.contact().create(new ContactData().withFirstName("Grzegorz10").withLastName("Kozlowski4").withAddress("Warsaw, ul. Magiera 3/22").withHomePhone("+48 20 50 50").withMobilePhone("+48601000000").withEmail("gkbrir05@gmail.com"));
     }
   }
   @Test

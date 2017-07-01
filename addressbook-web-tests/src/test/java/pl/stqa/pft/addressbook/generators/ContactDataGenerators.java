@@ -7,12 +7,15 @@ package pl.stqa.pft.addressbook.generators;
   import com.google.gson.GsonBuilder;
   import com.thoughtworks.xstream.XStream;
   import pl.stqa.pft.addressbook.model.ContactData;
+  import pl.stqa.pft.addressbook.model.Groups;
+
   import java.io.File;
   import java.io.FileWriter;
   import java.io.IOException;
   import java.io.Writer;
   import java.util.ArrayList;
   import java.util.List;
+
 
 public class ContactDataGenerators {
   @Parameter(names = "-c", description = "Contact count")
@@ -70,8 +73,8 @@ public class ContactDataGenerators {
     System.out.println(new File(".").getAbsolutePath());
     Writer writer = new FileWriter(file);
     for (ContactData contact : contacts){
-      writer.write(String.format("%s;%s;%s;%s;%s;%s\n", contact.getFirstName(), contact.getLastName(), contact.getAddress(),
-              contact.getMobilePhone(),contact.getEmail(),contact.getGroup()));
+      writer.write(String.format("%s;%s;%s;%s;%s\n", contact.getFirstName(), contact.getLastName(), contact.getAddress(),
+              contact.getMobilePhone(),contact.getEmail()));
     }
     writer.close();
   }
@@ -81,7 +84,7 @@ public class ContactDataGenerators {
     for (int i = 0; i < count; i++) {
       contacts.add(new ContactData().withFirstName(String.format("FirstName%s", i)).withLastName(String.format("LastName%s", i))
               .withAddress(String.format("Warsaw, ul. Magiera %s", i)).withHomePhone(String.format("+484083625%s", i)).withMobilePhone(String.format("+4860100000%s", i))
-                      .withEmail(String.format("test%s@gmail.com", i)).withGroup("test 1"));
+                      .withEmail(String.format("test%s@gmail.com", i)));
 
     }
     return contacts;

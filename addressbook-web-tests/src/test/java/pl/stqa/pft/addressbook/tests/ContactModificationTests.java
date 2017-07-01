@@ -18,8 +18,7 @@ public class ContactModificationTests extends TestBase{
     if(app.db().contacts().size() == 0){
       app.goTo().homePage();
       app.contact().create(new ContactData().withFirstName("Grzegorz22").withLastName("Kozlowski22")
-              .withAddress("Warsaw, ul. Magiera 3/22").withMobilePhone("+48601000000").withEmail("gkbrir05@gmail.com")
-              .withGroup("test 1"));
+              .withAddress("Warsaw, ul. Magiera 3/22").withMobilePhone("+48601000000").withEmail("gkbrir05@gmail.com"));
     }
   }
 
