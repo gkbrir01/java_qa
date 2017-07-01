@@ -68,7 +68,7 @@ public class ContactCreationTests extends TestBase{
   public Iterator<Object[]> validContacts(){
     List<Object[]> list = new ArrayList<Object[]>();
     list.add(new Object[] {new ContactData().withFirstName("Grzegorz1").withLastName("Kozlowski1").withAddress("Warsaw, ul. Magiera 1")
-            .withMobilePhone("+48601200301").withEmail("test1@gmail.com").withGroup("test1")});
+            .withHomePhone("+484083625").withMobilePhone("+48601200301").withEmail("test1@gmail.com").withGroup("test1")});
     list.add(new Object[] {new ContactData().withFirstName("Grzegorz2").withLastName("Kozlowski2").withAddress("Warsaw, ul. Magiera 2")
             .withMobilePhone("+48601200302").withEmail("test2@gmail.com").withGroup("test1")});
     list.add(new Object[] {new ContactData().withFirstName("Grzegorz3").withLastName("Kozlowski3").withAddress("Warsaw, ul. Magiera 3")
@@ -76,13 +76,13 @@ public class ContactCreationTests extends TestBase{
     return list.iterator();
   }
 
-  @Test(dataProvider = "validContactsFromJson")
+  @Test(dataProvider = "validContactsFromXML")
   public void testContactCreation(ContactData contact) {
+    Contacts before = app.db().contacts();
     app.goTo().homePage();
-    Contacts before = app.contact().all();
     app.contact().create(contact);
     assertThat(app.contact().count(), equalTo(before.size() + 1));
-    Contacts after = app.contact().all();
+    Contacts after = app.db().contacts();
     assertThat(after, equalTo(
             before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
   }

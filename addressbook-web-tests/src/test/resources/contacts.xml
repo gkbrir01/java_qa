@@ -3,24 +3,9 @@
     <firstName>FirstName0</firstName>
     <lastName>LastName0</lastName>
     <address>Warsaw, ul. Magiera 0</address>
+    <homePhone>+4840836250</homePhone>
     <mobilePhone>+48601000000</mobilePhone>
     <email>test0@gmail.com</email>
-    <group>test1</group>
-  </contact>
-  <contact>
-    <firstName>FirstName1</firstName>
-    <lastName>LastName1</lastName>
-    <address>Warsaw, ul. Magiera 1</address>
-    <mobilePhone>+48601000001</mobilePhone>
-    <email>test1@gmail.com</email>
-    <group>test1</group>
-  </contact>
-  <contact>
-    <firstName>FirstName2</firstName>
-    <lastName>LastName2</lastName>
-    <address>Warsaw, ul. Magiera 2</address>
-    <mobilePhone>+48601000002</mobilePhone>
-    <email>test2@gmail.com</email>
-    <group>test1</group>
+    <group>test 1</group>
   </contact>
 </list>
