@@ -3,6 +3,8 @@ package pl.stqa.pft.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import pl.stqa.pft.addressbook.model.ContactData;
 import pl.stqa.pft.addressbook.model.GroupData;
 import pl.stqa.pft.addressbook.model.Groups;
 import java.util.List;
@@ -45,6 +47,10 @@ public class GroupHelper extends HelperBase{
 
   public void submitGroupModification() {
     click(By.name("update"));
+  }
+
+  public void selectGroup(By locator,GroupData groupData ) {
+    new Select(wd.findElement(locator)).selectByVisibleText(groupData.getName());
   }
 
   public void create(GroupData group) {

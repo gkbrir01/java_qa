@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
 
@@ -14,7 +15,7 @@ public class HelperBase {
     this.wd = wd;
   }
 
-  protected void click(By locator) {
+  public void click(By locator) {
     wd.findElement(locator).click();
   }
 
@@ -29,6 +30,7 @@ public class HelperBase {
       }
     }
   }
+
 
   protected void attach(By locator, File file) {
     if (file != null) {

@@ -40,6 +40,7 @@ public class ContactHelper extends HelperBase{
     }
   }
 
+
   public void initContactCreation() {
     click(By.linkText("add new"));
   }
@@ -208,5 +209,7 @@ public class ContactHelper extends HelperBase{
   public static String cleanedPhones(String phones){
     return phones.replace("H: ","").replace("M: ","").replace("W: ","");
   }
+
+
 }
 

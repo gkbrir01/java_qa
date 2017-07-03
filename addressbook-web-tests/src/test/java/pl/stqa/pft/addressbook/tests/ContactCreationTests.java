@@ -71,10 +71,10 @@ public class ContactCreationTests extends TestBase{
   public Iterator<Object[]> validContacts(){
     Groups groups = app.db().groups();
     List<Object[]> list = new ArrayList<Object[]>();
-    list.add(new Object[] {new ContactData().withFirstName("Grzegorz1").withLastName("Kozlowski1").withAddress("Warsaw, ul. Magiera 1")
-            .withHomePhone("+484083625").withMobilePhone("+48601200301").withEmail("test1@gmail.com").inGroup(groups.iterator().next())});
-    list.add(new Object[] {new ContactData().withFirstName("Grzegorz2").withLastName("Kozlowski2").withAddress("Warsaw, ul. Magiera 2")
-            .withHomePhone("+484083626").withMobilePhone("+48601200302").withEmail("test2@gmail.com").inGroup(groups.iterator().next())});
+    //list.add(new Object[] {new ContactData().withFirstName("Grzegorz1").withLastName("Kozlowski1").withAddress("Warsaw, ul. Magiera 1")
+    //        .withHomePhone("+484083625").withMobilePhone("+48601200301").withEmail("test1@gmail.com").inGroup(groups.iterator().next())});
+    //list.add(new Object[] {new ContactData().withFirstName("Grzegorz2").withLastName("Kozlowski2").withAddress("Warsaw, ul. Magiera 2")
+    //        .withHomePhone("+484083626").withMobilePhone("+48601200302").withEmail("test2@gmail.com").inGroup(groups.iterator().next())});
     list.add(new Object[] {new ContactData().withFirstName("Grzegorz3").withLastName("Kozlowski3").withAddress("Warsaw, ul. Magiera 3")
             .withHomePhone("+484083627").withMobilePhone("+48601200303").withEmail("test3@gmail.com").inGroup(groups.iterator().next())});
     return list.iterator();

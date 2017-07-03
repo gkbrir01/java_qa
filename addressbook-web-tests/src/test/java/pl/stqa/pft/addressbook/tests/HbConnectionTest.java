@@ -8,16 +8,18 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pl.stqa.pft.addressbook.model.ContactData;
+import pl.stqa.pft.addressbook.model.Contacts;
 import pl.stqa.pft.addressbook.model.GroupData;
+import pl.stqa.pft.addressbook.model.Groups;
 
 import java.util.List;
 
-public class HbConnectionTest {
+public class HbConnectionTest extends TestBase{
 
   private SessionFactory sessionFactory;
 
-  @BeforeClass
-  protected void setUp() throws Exception {
+  /*@BeforeClass
+  public void setUp() throws Exception {
     // A SessionFactory is set up once for an application!
     final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
             .configure() // configures settings from hibernate.cfg.xml
@@ -31,7 +33,7 @@ public class HbConnectionTest {
       // so destroy it manually.
       StandardServiceRegistryBuilder.destroy( registry );
     }
-  }
+  } */
 
   @Test
   public void testHbConnectionGroup(){
@@ -50,12 +52,21 @@ public class HbConnectionTest {
     Session session = sessionFactory.openSession();
     session.beginTransaction();
     List<ContactData> result = session.createQuery( "from ContactData where deprecated = '0000-00-00'" ).list();
-    session.getTransaction().commit();
-    session.close();
-
     for (ContactData contact : result) {
       System.out.println(contact);
       System.out.println(contact.getGroups());
     }
+    session.getTransaction().commit();
+    session.close();
+  }
+  @Test
+  public void testHbConnection(){
+
+    Groups groupsDB = app.db().groups();
+    for (GroupData group : groupsDB) {
+      System.out.println(group);
+      System.out.println(group.getContacts());
+    }
+    Contacts contactsDB = app.db().contacts();
   }
 }

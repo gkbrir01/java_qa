@@ -9,7 +9,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.junit.MatcherAssert.assertThat;
 import static org.testng.Assert.assertEquals;
 
-public class ContactDeletionTests extends TestBase{
+public class ContactDeletionTests extends TestBase {
 
   @BeforeMethod
   public void ensurePreconditions(){
