@@ -53,6 +53,10 @@ public class GroupHelper extends HelperBase{
     new Select(wd.findElement(locator)).selectByVisibleText(groupData.getName());
   }
 
+  public void selectGroupAll(By locator) {
+    new Select(wd.findElement(locator)).selectByVisibleText("[all]");
+  }
+
   public void create(GroupData group) {
     initGroupCreation();
     fillGroupForm(group);

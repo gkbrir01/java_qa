@@ -34,40 +34,50 @@ public class ContactRemoveWithGroupTests extends TestBase {
     Groups groupsDB = app.db().groups();
     Contacts contactsDB = app.db().contacts();
 
-    Groups groupsDBTemp = app.db().groups();
-    for (GroupData GroupDB: groupsDB) {
-      Contacts contactGroup = GroupDB.getContacts();
-      if(contactGroup.size() == 0){
-        groupsDBTemp.remove(GroupDB);
+    //Eliminacja grup które nie zawierają kontaktów
+    Groups groupsDBTemp = removeGroupWithZeroContacts(groupsDB);
+    if (groupsDBTemp.isEmpty()){
+      ContactAddToGroupTests groupsWithOutContact = new ContactAddToGroupTests();
+      groupsWithOutContact.contactAddToGroup(contactsDB.iterator().next(),groupsDB.iterator().next());
+      groupsDB = app.db().groups();
+      groupsDBTemp = removeGroupWithZeroContacts(groupsDB);
+    }
+
+    GroupData removeFromGroup = groupsDBTemp.iterator().next();
+    Contacts before = removeFromGroup.getContacts();
+    ContactData contact = before.iterator().next();
+
+
+    contactRemoveFromGroup(removeFromGroup, contact);
+
+    Groups groupsDBAfter = app.db().groups();
+    Contacts after = new Contacts();
+    for (GroupData afterGroup : groupsDBAfter) {
+      if (afterGroup.equals(removeFromGroup)){
+        after = afterGroup.getContacts();
       }
     }
+    assertEquals(after.size(), before.size() - 1);
+    assertThat(after, equalTo(before.without(contact)));
+  }
 
-    if(groupsDBTemp.isEmpty()){
-      app.goTo().homePage();
-      GroupData group = groupsDB.iterator().next();
-      ContactData contactAdd = new ContactData().withFirstName("Jan").withLastName("Nowak")
-              .withAddress("Warsaw, ul. Magiera 3/22").withMobilePhone("+48601000055").withEmail("jan.nowak@gmail.com")
-              .inGroup(group);
-              app.contact().create(contactAdd);
-      groupsDBTemp.add(group);
+  private Groups removeGroupWithZeroContacts(Groups groupsDB) {
+    Groups groupsDBTemp = app.db().groups();
+    for (GroupData group: groupsDB) {
+      Contacts contactsForGroup = group.getContacts();
+      if(contactsForGroup.size() == 0){
+        groupsDBTemp.remove(group);
+      }
     }
+    return groupsDBTemp;
+  }
 
-    GroupData removeGroup = groupsDBTemp.iterator().next();
-    System.out.println("removeGroup "+removeGroup);
-    Contacts contacts = removeGroup.getContacts();
-    System.out.println("contacts "+contacts);
-    ContactData contact = contacts.iterator().next();
-    System.out.println("contact "+contact);
-
+  public void contactRemoveFromGroup(GroupData removeFromGroup, ContactData contact) {
     app.goTo().homePage();
-    app.group().selectGroup(By.name("group"),removeGroup);
+    app.group().selectGroup(By.name("group"),removeFromGroup);
     app.contact().selectContactById(contact.getId());
     app.contact().click(By.name("remove"));
     app.contact().returnToHomePage();
-    Groups after =contact.getGroups();
-    assertEquals(after.size(), contacts.size() - 1);
-    //Contacts after = app.db().contacts();
-    //assertThat(after, equalTo(before.without(deletedContact)));
   }
 }
 
