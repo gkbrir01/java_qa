@@ -28,16 +28,15 @@ public class ContactAddToGroupTests extends TestBase{
     }
   }
 
-
   @Test
   public void testContactAddToGroup(){
     Contacts contactsDB = app.db().contacts();
     Groups groupsDB = app.db().groups();
 
-    //Sprawdzenie czy kontakt należy do wszystkich grup
+    ///Method of removing contact that belong to all groups
     Contacts contactsDBTemp = removeContactToAllGroup(contactsDB, groupsDB);
 
-
+    //If each contact belongs to all groups, call the method that removes the contact from the group
     if(contactsDBTemp.isEmpty()){
       ContactRemoveWithGroupTests contactWithGroup = new ContactRemoveWithGroupTests();
       contactWithGroup.contactRemoveFromGroup(groupsDB.iterator().next(), contactsDB.iterator().next());
@@ -46,11 +45,9 @@ public class ContactAddToGroupTests extends TestBase{
     }
 
     ContactData contact =contactsDBTemp.iterator().next();
-    //Wykluczenie grup do których kontakt należy
-
     Groups before = contact.getGroups();
+    //Method returns the groups that can be added to a contact
     Groups groupsDBTemp = removeGroupWithContact(groupsDB, before);
-
     GroupData addGroup = groupsDBTemp.iterator().next();
 
     contactAddToGroup(contact, addGroup);
@@ -67,6 +64,19 @@ public class ContactAddToGroupTests extends TestBase{
     assertThat(after, equalTo(before.withAdded(addGroup)));
   }
 
+  //Method of removing contact that belong to all groups
+  private Contacts removeContactToAllGroup(Contacts contactsDB, Groups groupsDB) {
+    Contacts contactsDBTemp = app.db().contacts();
+    for (ContactData contactDB: contactsDB) {
+      Groups groupsForContact = contactDB.getGroups();
+      if(groupsDB.equals(groupsForContact)){
+        contactsDBTemp.remove(contactDB);
+      }
+    }
+    return contactsDBTemp;
+  }
+
+  //Method returns the groups that can be added to a contact
   private Groups removeGroupWithContact(Groups groupsDB, Groups before) {
     Groups groupsDBTemp = app.db().groups();
     for (GroupData groupContact : before) {
@@ -77,17 +87,6 @@ public class ContactAddToGroupTests extends TestBase{
       }
     }
     return groupsDBTemp;
-  }
-
-  private Contacts removeContactToAllGroup(Contacts contactsDB, Groups groupsDB) {
-    Contacts contactsDBTemp = app.db().contacts();
-    for (ContactData contactDB: contactsDB) {
-      Groups groupsForContact = contactDB.getGroups();
-      if(groupsDB.equals(groupsForContact)){
-        contactsDBTemp.remove(contactDB);
-      }
-    }
-    return contactsDBTemp;
   }
 
   public void contactAddToGroup(ContactData contact, GroupData addGroup) {

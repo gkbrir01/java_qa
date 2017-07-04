@@ -34,8 +34,10 @@ public class ContactRemoveWithGroupTests extends TestBase {
     Groups groupsDB = app.db().groups();
     Contacts contactsDB = app.db().contacts();
 
-    //Eliminacja grup które nie zawierają kontaktów
+    //Remove groups that do not have contacts
     Groups groupsDBTemp = removeGroupWithZeroContacts(groupsDB);
+
+    //When no group has a contact, call the method that adds the contact to the group
     if (groupsDBTemp.isEmpty()){
       ContactAddToGroupTests groupsWithOutContact = new ContactAddToGroupTests();
       groupsWithOutContact.contactAddToGroup(contactsDB.iterator().next(),groupsDB.iterator().next());
@@ -61,6 +63,7 @@ public class ContactRemoveWithGroupTests extends TestBase {
     assertThat(after, equalTo(before.without(contact)));
   }
 
+  //Method remove groups that do not have contacts
   private Groups removeGroupWithZeroContacts(Groups groupsDB) {
     Groups groupsDBTemp = app.db().groups();
     for (GroupData group: groupsDB) {
