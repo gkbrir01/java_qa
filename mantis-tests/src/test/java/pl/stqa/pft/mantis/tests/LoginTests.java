@@ -12,7 +12,7 @@ public class LoginTests extends TestBase {
   @Test
   public void testLogin() throws IOException {
     HttpSesion session = app.newSession();
-    assertTrue(session.login("administrator", "Elixir01"));
+    assertTrue(session.login("administrator", "root"));
     assertTrue(session.isLoggedInAs("administrator"));
   }
 }
