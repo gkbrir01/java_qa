@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84f53127-5fd3-41e7-bc5b-e2f934b308e4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-sample/build.gradle" afterPath="$PROJECT_DIR$/rest-sample/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest-sample/src/test/java/pl/stqa/pft/rest/RestTests.java" afterPath="$PROJECT_DIR$/rest-sample/src/test/java/pl/stqa/pft/rest/RestTests.java" />
     </list>
     <ignored path="$PROJECT_DIR$/sandbox/.gradle/" />
     <ignored path="$PROJECT_DIR$/sandbox/build/" />
@@ -89,39 +88,22 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest-sample/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="55" lean-forward="false" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+            <state relative-caret-position="264">
+              <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rest-sample/src/test/java/pl/stqa/pft/rest/RestTests.java">
+      <file leaf-file-name="RestAssuredTests.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rest-sample/src/test/java/pl/stqa/pft/rest/RestAssuredTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="22" column="93" lean-forward="true" selection-start-line="22" selection-start-column="93" selection-end-line="22" selection-end-column="93" />
+            <state relative-caret-position="96">
+              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1326#1327#0" expanded="true" />
-                <element signature="e#1402#1403#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Issue.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rest-sample/src/test/java/pl/stqa/pft/rest/Issue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-              <folding>
-                <element signature="e#145#146#0" expanded="true" />
-                <element signature="e#164#165#0" expanded="true" />
-                <element signature="e#268#269#0" expanded="true" />
-                <element signature="e#292#293#0" expanded="true" />
-                <element signature="e#423#424#0" expanded="true" />
-                <element signature="e#451#452#0" expanded="true" />
+                <element signature="e#580#581#0" expanded="true" />
+                <element signature="e#668#669#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1012,8 +994,8 @@
         <entry key="$PROJECT_DIR$/addressbook-web-tests/build.gradle" value="3516714683" />
         <entry key="$PROJECT_DIR$/mantis-tests" value="2996801453627" />
         <entry key="$PROJECT_DIR$/mantis-tests/build.gradle" value="3049273329" />
-        <entry key="$PROJECT_DIR$/rest-sample" value="2996823031212" />
-        <entry key="$PROJECT_DIR$/rest-sample/build.gradle" value="242562784" />
+        <entry key="$PROJECT_DIR$/rest-sample" value="2996827651823" />
+        <entry key="$PROJECT_DIR$/rest-sample/build.gradle" value="3910576472" />
         <entry key="$PROJECT_DIR$/sandbox" value="2991458307417" />
         <entry key="$PROJECT_DIR$/sandbox/build.gradle" value="3201354848" />
         <entry key="$PROJECT_DIR$/sandbox/gradle/wrapper/gradle-wrapper.properties" value="1114575256" />
@@ -1838,7 +1820,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/addressbook-web-tests/src/test/java/pl/stqa/pft/addressbook/tests/GroupCreationTests.java" />
         <option value="$PROJECT_DIR$/addressbook-web-tests/src/test/resources/contacts.xml" />
         <option value="$PROJECT_DIR$/addressbook-web-tests/src/test/java/pl/stqa/pft/addressbook/tests/GroupModificationTests.java" />
         <option value="$PROJECT_DIR$/addressbook-web-tests/src/test/java/pl/stqa/pft/addressbook/tests/TestBase.java" />
@@ -1886,9 +1867,10 @@
         <option value="$PROJECT_DIR$/mantis-tests/src/test/java/pl/stqa/pft/mantis/model/Issue.java" />
         <option value="$PROJECT_DIR$/mantis-tests/src/test/java/pl/stqa/pft/mantis/tests/SoapTests.java" />
         <option value="$PROJECT_DIR$/mantis-tests/src/test/java/pl/stqa/pft/mantis/appmanager/SoapHelper.java" />
-        <option value="$PROJECT_DIR$/rest-sample/build.gradle" />
-        <option value="$PROJECT_DIR$/rest-sample/src/test/java/pl/stqa/pft/rest/RestTests.java" />
         <option value="$PROJECT_DIR$/rest-sample/src/test/java/pl/stqa/pft/rest/Issue.java" />
+        <option value="$PROJECT_DIR$/rest-sample/src/test/java/pl/stqa/pft/rest/RestTests.java" />
+        <option value="$PROJECT_DIR$/rest-sample/build.gradle" />
+        <option value="$PROJECT_DIR$/rest-sample/src/test/java/pl/stqa/pft/rest/RestAssuredTests.java" />
       </list>
     </option>
   </component>
@@ -1950,57 +1932,6 @@
           <expand>
             <path>
               <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="addressbook-web-tests" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="addressbook-web-tests" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="addressbook-web-tests" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mantis-tests" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mantis-tests" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mantis-tests" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mantis-tests" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mantis-tests" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mantis-tests" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mantis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
               <item name="rest-sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -2052,6 +1983,27 @@
             </path>
             <path>
               <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sandbox" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sandbox" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sandbox" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sandbox" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
               <item name="soap-sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -2064,6 +2016,10 @@
               <item name="soap-sample" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -2095,6 +2051,7 @@
       <recent name="pl.stqa.pft.sandbox" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pl.stqa.pft.rest" />
       <recent name="pl.stqa.pft.mantis.appmanager" />
       <recent name="pl.stqa.pft.mantis.tests" />
     </key>
@@ -2115,20 +2072,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.RestTests.testCreateIssue">
-    <configuration name="GeoIpServiceTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.RestAssuredTests.testCreateIssue">
+    <configuration name="GroupCreationTests" type="TestNG" factoryName="TestNG" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="pl.stqa.pft.soap.*" />
+          <option name="PATTERN" value="pl.stqa.pft.addressbook.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="soap-sample_test" />
+      <module name="addressbook-web-tests_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="pl.stqa.pft.soap" />
-      <option name="MAIN_CLASS_NAME" value="pl.stqa.pft.soap.GeoIpServiceTests" />
+      <option name="PACKAGE_NAME" value="pl.stqa.pft.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="pl.stqa.pft.addressbook.tests.GroupCreationTests" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -2148,22 +2105,22 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="GroupCreationTests" type="TestNG" factoryName="TestNG" nameIsGenerated="true">
+    <configuration name="RestAssuredTests.testCreateIssue" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="pl.stqa.pft.addressbook.tests.*" />
+          <option name="PATTERN" value="pl.stqa.pft.rest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="addressbook-web-tests_test" />
+      <module name="rest-sample_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="pl.stqa.pft.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="pl.stqa.pft.addressbook.tests.GroupCreationTests" />
-      <option name="METHOD_NAME" />
+      <option name="PACKAGE_NAME" value="pl.stqa.pft.rest" />
+      <option name="MAIN_CLASS_NAME" value="pl.stqa.pft.rest.RestAssuredTests" />
+      <option name="METHOD_NAME" value="testCreateIssue" />
       <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -2559,19 +2516,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="TestNG.GroupCreationTests" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.pl.stqa.pft.addressbook.tests in addressbook-web-tests_test" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.GeoIpServiceTests" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.SoapTests" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.SoapTests.testGetProjects" />
-      <item index="5" class="java.lang.String" itemvalue="TestNG.SoapTests.testCreateIssue" />
-      <item index="6" class="java.lang.String" itemvalue="TestNG.RestTests.testCreateIssue" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.SoapTests" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.SoapTests.testGetProjects" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.SoapTests.testCreateIssue" />
+      <item index="5" class="java.lang.String" itemvalue="TestNG.RestTests.testCreateIssue" />
+      <item index="6" class="java.lang.String" itemvalue="TestNG.RestAssuredTests.testCreateIssue" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.RestTests.testCreateIssue" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.SoapTests.testCreateIssue" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.SoapTests.testGetProjects" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.SoapTests" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.GeoIpServiceTests" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.RestAssuredTests.testCreateIssue" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.RestTests.testCreateIssue" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.SoapTests.testCreateIssue" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.SoapTests.testGetProjects" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.SoapTests" />
       </list>
     </recent_temporary>
   </component>
@@ -2594,11 +2551,11 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PointTests - 2017.07.26 at 12h 15m 48s.xml">
-      <configuration name="PointTests" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="ResetPasswordUserTests_testResetPasswordUser - 2017.07.07 at 23h 34m 03s.xml">
       <configuration name="ResetPasswordUserTests.testResetPasswordUser" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RestAssuredTests_testCreateIssue - 2017.07.26 at 22h 12m 24s.xml">
+      <configuration name="RestAssuredTests.testCreateIssue" configurationId="TestNG" />
     </history-entry>
     <history-entry file="RestTests_testCreateIssue - 2017.07.26 at 21h 01m 33s.xml">
       <configuration name="RestTests.testCreateIssue" configurationId="TestNG" />
@@ -2641,14 +2598,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32638332" sideWeight="0.506875" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5805085" sideWeight="0.493125" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5805085" sideWeight="0.493125" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11348897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16731517" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24385026" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32555124" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.092736706" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2730,13 +2687,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/pl/stqa/pft/addressbook/tests/ContactRemoveWithGroupTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/pl/stqa/pft/addressbook/tests/ContactAddToGroupTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -3085,29 +3035,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest-sample/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="55" lean-forward="false" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest-sample/src/test/java/pl/stqa/pft/rest/RestTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="22" column="93" lean-forward="true" selection-start-line="22" selection-start-column="93" selection-end-line="22" selection-end-column="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1326#1327#0" expanded="true" />
-            <element signature="e#1402#1403#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rest-sample/src/test/java/pl/stqa/pft/rest/Issue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
+        <state relative-caret-position="744">
           <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
           <folding>
             <element signature="e#145#146#0" expanded="true" />
@@ -3116,6 +3046,38 @@
             <element signature="e#292#293#0" expanded="true" />
             <element signature="e#423#424#0" expanded="true" />
             <element signature="e#451#452#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-sample/src/test/java/pl/stqa/pft/rest/RestTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1325#1326#0" expanded="true" />
+            <element signature="e#1401#1402#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-sample/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest-sample/src/test/java/pl/stqa/pft/rest/RestAssuredTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
           </folding>
         </state>
       </provider>
