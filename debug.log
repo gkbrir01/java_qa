@@ -267,3 +267,4 @@
 [0707/232246.662:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
 [0707/232949.851:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
 [0707/233349.570:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
+[0727/100410.254:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
