@@ -63,3 +63,6 @@ task testContacts(type: Test) {
         systemProperty 'verifyUI', "${verifyUI}"
     }
 }
+testContacts.doFirst {
+    jvmArgs "-javaagent:${configurations.agent.singleFile}"
+}
