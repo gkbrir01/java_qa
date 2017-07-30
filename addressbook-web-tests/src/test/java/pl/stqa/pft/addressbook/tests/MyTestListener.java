@@ -15,7 +15,8 @@ public class MyTestListener implements ITestListener{
 
   @Override
   public void onTestSuccess(ITestResult result) {
-
+    ApplicationManager app = (ApplicationManager) result.getTestContext().getAttribute("app");
+    saveScreenshot(app.takeScreenshot());
   }
 
   @Override
